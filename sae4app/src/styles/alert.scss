@@ -1,0 +1,37 @@
+.alert {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 80%;
+    height: 7%;
+    display: flex;
+    align-items: center;
+    transform: translate(-50%, -50%);
+    margin-top: -100px;
+    margin-bottom: 0;
+    animation-name: slide;
+    animation-duration: 7s;
+    animation-fill-mode: forwards;
+    background-color: #ffe7e5;
+  }
+  
+  @keyframes slide {
+    0% {
+      margin-top: -50%;
+    }
+    20% {
+      margin-top: 15%;
+    }
+    21% {
+      margin-top: 15%;
+      animation-timing-function: linear;
+    }
+    75% {
+      margin-top: 15%;
+      animation-timing-function: ease-out;
+    }
+    100% {
+      margin-top: -50%;
+    }
+  }
+  

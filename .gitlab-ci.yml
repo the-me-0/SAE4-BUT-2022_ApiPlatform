@@ -1,0 +1,30 @@
+stages:
+  - sonarqube-check
+# Define a job named 'sonarqube-check'
+sonarqube-check:
+  # Set the stage of the pipeline to 'sonarqube-check'
+  stage: sonarqube-check
+  image: 
+    # Use the latest version of the SonarScanner CLI Docker image
+    name: sonarsource/sonar-scanner-cli:latest
+    # Override the default entrypoint of the image to an empty command
+    entrypoint: [""]
+  variables:
+    # Set the home directory for SonarQube to be within the project directory
+    SONAR_USER_HOME: "${CI_PROJECT_DIR}/.sonar"  # Defines the location of the analysis task cache
+    # Fetch the entire Git history to make all branches available for the analysis task
+    GIT_DEPTH: "0"  # Tells git to fetch all the branches of the project, required by the analysis task
+  cache:
+    # Define the cache key based on the job name
+    key: "${CI_JOB_NAME}"
+    paths:
+      # Specify the cache directory for the SonarQube analysis
+      - .sonar/cache
+  script: 
+    # Execute the SonarQube scanner script
+    - sonar-scanner -X
+  # Allow the job to fail without causing the entire pipeline to fail
+  allow_failure: true
+  # Specify that this job should only run on the 'main' branch
+  only:
+    - main

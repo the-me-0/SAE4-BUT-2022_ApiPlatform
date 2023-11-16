@@ -1,0 +1,50 @@
+$admin-color: #d22828;
+$user-color : #3064b4;
+$tech-color : #DFA16D;
+
+.button-wrapper .admin-button {
+  background-color: $admin-color;
+  color: #fff;
+  &:hover {
+    background-color: darken($admin-color, 10%);
+  }
+  &:active {
+    background-color: darken($admin-color, 50%);
+  }
+}
+
+.button-wrapper .user-button {
+  background-color: $user-color;
+  color: #fff;
+  &:hover {
+    background-color: darken($user-color, 10%);
+  }
+    &:active {
+        background-color: darken($user-color, 50%);
+    }
+}
+
+.button-wrapper .tech-button {
+  background-color: $tech-color;
+  color: #fff;
+  &:hover {
+    background-color: darken($tech-color, 10%);
+  }
+    &:active {
+        background-color: darken($tech-color, 50%);
+    }
+}
+
+#roleText{
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.roleIcon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1vw;
+}

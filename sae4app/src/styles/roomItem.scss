@@ -1,0 +1,59 @@
+#temperatureContainer{
+
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+
+    p{
+        font-weight: bold;
+        font-size: 5vw;
+    }
+
+    height: 7vw;
+    display: flex;
+    justify-content: center;
+}
+
+#variationIcon{
+    width: 15vw;
+    height: 15vw;
+    margin: 0;
+    padding: 0;
+}
+
+#variation{
+    width: 30vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#variations{
+    align-items: center;
+    height: 20vw;
+}
+
+#advices {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#line{
+    border: 0.8px solid #EEEEEE;
+}
+
+#strongLine{
+    border: 0.8px solid #121212;
+}
+
+.temperatureContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#textObjective{
+    text-align: left;
+}

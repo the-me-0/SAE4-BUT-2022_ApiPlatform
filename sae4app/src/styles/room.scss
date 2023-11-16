@@ -1,0 +1,14 @@
+#inputLabel{
+    z-index: 0;
+}
+
+#loading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p{
+        margin-top: 2vh;
+    }
+}
